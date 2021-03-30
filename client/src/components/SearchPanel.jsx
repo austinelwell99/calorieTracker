@@ -1,5 +1,7 @@
 import React from 'react';
 
-const SearchPanel = () => <div>Search Panel</div>;
+const SearchPanel = ({ getWebcams }) => (
+  <button onClick={getWebcams}>Search</button>
+);
 
 export default SearchPanel;
