@@ -21,3 +21,8 @@ body {
   padding: 10px;
   background-color: cornflowerblue;
 }
+
+.webcamListItemContainer {
+  margin: 5px;
+  background-color: yellow;
+}
