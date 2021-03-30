@@ -4,5 +4,20 @@ body {
 
 .appContainer {
   display: flex;
-  background-color: rgb(209, 167, 176);
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.searchPanelContainer {
+  width: calc(30% - 10px);
+  height: 100%;
+  padding: 10px;
+  background-color: darkcyan;
+}
+
+.webcamDisplayContainer {
+  width: calc(70% - 10px);
+  height: 100%;
+  padding: 10px;
+  background-color: cornflowerblue;
 }

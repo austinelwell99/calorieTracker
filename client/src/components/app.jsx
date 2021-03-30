@@ -8,19 +8,26 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      webcamList: [],
+    };
 
     this.getWebcams = this.getWebcams.bind(this);
   }
 
   getWebcams() {
-    axios.get('/webcams').then((response) => console.log(response));
+    axios.get('/webcams').then((response) => {
+      this.setState({ webcamList: response.data.result.webcams });
+    });
   }
 
   render() {
     return (
       <div className='appContainer'>
-        <SearchPanel getWebcams={this.getWebcams} />
+        <SearchPanel
+          getWebcams={this.getWebcams}
+          webcamList={this.state.webcamList}
+        />
         <WebcamDisplay />
       </div>
     );
