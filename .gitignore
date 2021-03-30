@@ -31,3 +31,6 @@ bower_components/
 .floobit
 .floo
 .flooignore
+
+# API KEY
+/config.js
