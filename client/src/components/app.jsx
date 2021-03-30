@@ -1,5 +1,8 @@
 import React from 'react';
 
+import WebcamDisplay from './WebcamDisplay.jsx';
+import SearchPanel from './SearchPanel.jsx';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +11,12 @@ class App extends React.Component {
   }
 
   render() {
-    return <div>Hello World</div>;
+    return (
+      <div className='appContainer'>
+        <SearchPanel />
+        <WebcamDisplay />
+      </div>
+    );
   }
 }
 
