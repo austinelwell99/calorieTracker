@@ -9,20 +9,27 @@ body {
 }
 
 .searchPanelContainer {
-  width: calc(30% - 10px);
+  width: calc(25% - 10px);
   height: 100%;
   padding: 10px;
   background-color: darkcyan;
 }
 
 .webcamDisplayContainer {
-  width: calc(70% - 10px);
+  width: calc(75% - 10px);
   height: 100%;
   padding: 10px;
   background-color: cornflowerblue;
 }
 
 .webcamListItemContainer {
+  width: 100%;
+  height: 100%;
   margin: 5px;
   background-color: yellow;
+}
+
+.selectedWebcamVideo {
+  width: 100%;
+  height: 1000px;
 }

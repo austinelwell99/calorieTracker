@@ -24,6 +24,7 @@ class App extends React.Component {
   }
 
   updateSelectedWebcam(obj) {
+    console.log(obj);
     this.setState({ selectedWebcam: obj });
   }
 
