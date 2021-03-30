@@ -18,11 +18,9 @@ app.get('/webcams', (req, res) => {
 
   axios(config)
     .then((data) => {
-      console.log(data.data);
       res.status(200).send(data.data);
     })
     .catch((err) => {
-      console.error(err);
       res.status(500).send(err);
     });
 });

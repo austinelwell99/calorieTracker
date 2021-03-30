@@ -1,7 +1,12 @@
 import React from 'react';
 
-const WebcamListItem = ({ w }) => (
-  <div className='webcamListItemContainer'>{w.title}</div>
+const WebcamListItem = ({ w, updateSelectedWebcam }) => (
+  <div
+    className='webcamListItemContainer'
+    onClick={() => updateSelectedWebcam(w)}
+  >
+    {w.title}
+  </div>
 );
 
 export default WebcamListItem;

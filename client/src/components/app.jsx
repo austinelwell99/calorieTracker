@@ -10,9 +10,11 @@ class App extends React.Component {
 
     this.state = {
       webcamList: [],
+      selectedWebcam: {},
     };
 
     this.getWebcams = this.getWebcams.bind(this);
+    this.updateSelectedWebcam = this.updateSelectedWebcam.bind(this);
   }
 
   getWebcams() {
@@ -21,14 +23,19 @@ class App extends React.Component {
     });
   }
 
+  updateSelectedWebcam(obj) {
+    this.setState({ selectedWebcam: obj });
+  }
+
   render() {
     return (
       <div className='appContainer'>
         <SearchPanel
           getWebcams={this.getWebcams}
           webcamList={this.state.webcamList}
+          updateSelectedWebcam={this.updateSelectedWebcam}
         />
-        <WebcamDisplay />
+        <WebcamDisplay selectedWebcam={this.state.selectedWebcam} />
       </div>
     );
   }
