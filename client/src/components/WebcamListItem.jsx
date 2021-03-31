@@ -5,7 +5,8 @@ const WebcamListItem = ({ w, updateSelectedWebcam }) => (
     className='webcamListItemContainer'
     onClick={() => updateSelectedWebcam(w)}
   >
-    {w.title}
+    <div>{w.title}</div>
+    <div>{w.location.country}</div>
   </div>
 );
 

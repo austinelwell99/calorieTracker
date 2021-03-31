@@ -49,3 +49,8 @@ body {
   width: 100%;
   height: 1000px;
 }
+
+.selectedWebcamDetails {
+  display: flex;
+  justify-content: space-between;
+}
