@@ -23,16 +23,35 @@ select {
 .searchOptionsContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+select,
+label {
+  margin-left: 5px;
+  margin-right: 10px;
+  font-size: 120%;
+}
+
+.searchButton {
+  margin-left: auto;
+  font-size: 130%;
+  width: 150%;
 }
 
 .optionsTopBar {
   display: flex;
+  align-items: flex-end;
 }
 
 .optionsBottomBar {
   display: flex;
-  justify-content: space-between;
-  margin: 10px 0 0 0;
+  justify-content: flex-end;
+  margin: 20px 0 -45px 0;
+}
+
+.nextPageButton {
+  margin-left: 10px;
 }
 
 .webcamDisplayContainer {

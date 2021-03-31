@@ -68,6 +68,7 @@ class SearchOptions extends React.Component {
             </select>
           </div>
           <button
+            className='searchButton'
             onClick={() =>
               this.setState({ offset: 0 }, () => getWebcams(this.state))
             }
@@ -87,6 +88,7 @@ class SearchOptions extends React.Component {
             Previous Page
           </button>
           <button
+            className='nextPageButton'
             disabled={this.state.offset + 10 >= total}
             onClick={() =>
               this.setState({ offset: this.state.offset + 10 }, () =>
