@@ -25,7 +25,7 @@ class SearchOptions extends React.Component {
             >
               <option value='all'>All</option>
               <option value='airport'>Airport</option>
-              <option value='bay'>bay</option>
+              <option value='bay'>Bay</option>
               <option value='beach'>Beach</option>
               <option value='building'>Building</option>
               <option value='camping'>Camping</option>
