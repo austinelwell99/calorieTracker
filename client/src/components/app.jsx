@@ -105,6 +105,7 @@ class App extends React.Component {
           favoritesList={this.state.favoritesList}
           favoriteIDsList={this.state.favoriteIDsList}
           toggleFavorite={this.toggleFavorite}
+          selectedWebcamId={this.state.selectedWebcam.id}
         />
         <WebcamDisplay selectedWebcam={this.state.selectedWebcam} />
       </div>

@@ -5,8 +5,15 @@ const WebcamListItem = ({
   updateSelectedWebcam,
   favorited,
   toggleFavorite,
+  selectedWebcamId,
 }) => (
-  <div className='listItemContainer'>
+  <div
+    className={
+      selectedWebcamId === w.id
+        ? 'listItemContainer selectedListItem'
+        : 'listItemContainer'
+    }
+  >
     <div className='listItemText'>
       <div className='listItemTitle' onClick={() => updateSelectedWebcam(w)}>
         {w.title}

@@ -6,6 +6,7 @@ const WebcamList = ({
   favoriteIDsList,
   updateSelectedWebcam,
   toggleFavorite,
+  selectedWebcamId,
 }) => (
   <div className='webcamListContainer'>
     {webcamList?.map((w) => (
@@ -15,6 +16,7 @@ const WebcamList = ({
         updateSelectedWebcam={updateSelectedWebcam}
         favorited={favoriteIDsList.includes(w.id)}
         toggleFavorite={toggleFavorite}
+        selectedWebcamId={selectedWebcamId}
       />
     ))}
   </div>

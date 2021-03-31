@@ -10,6 +10,7 @@ const SearchPanel = ({
   favoritesList,
   favoriteIDsList,
   toggleFavorite,
+  selectedWebcamId,
 }) => (
   <div className='searchPanelContainer'>
     <SearchOptions getWebcams={getWebcams} total={total} />
@@ -19,6 +20,7 @@ const SearchPanel = ({
       favoriteIDsList={favoriteIDsList}
       updateSelectedWebcam={updateSelectedWebcam}
       toggleFavorite={toggleFavorite}
+      selectedWebcamId={selectedWebcamId}
     />
     <h2>Favorites</h2>
     <WebcamList
@@ -26,6 +28,7 @@ const SearchPanel = ({
       favoriteIDsList={favoriteIDsList}
       updateSelectedWebcam={updateSelectedWebcam}
       toggleFavorite={toggleFavorite}
+      selectedWebcamId={selectedWebcamId}
     />
   </div>
 );
