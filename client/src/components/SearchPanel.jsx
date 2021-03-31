@@ -13,15 +13,15 @@ const SearchPanel = ({
 }) => (
   <div className='searchPanelContainer'>
     <SearchOptions getWebcams={getWebcams} total={total} />
+    <h2>Live Webcams</h2>
     <WebcamList
-      title='Live Webcams'
       webcamList={webcamList}
       favoriteIDsList={favoriteIDsList}
       updateSelectedWebcam={updateSelectedWebcam}
       toggleFavorite={toggleFavorite}
     />
+    <h2>Favorites</h2>
     <WebcamList
-      title='Favorites'
       webcamList={favoritesList}
       favoriteIDsList={favoriteIDsList}
       updateSelectedWebcam={updateSelectedWebcam}
