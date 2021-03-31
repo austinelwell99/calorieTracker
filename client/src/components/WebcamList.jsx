@@ -1,13 +1,22 @@
 import React from 'react';
 import WebcamListItem from './WebcamListItem.jsx';
 
-const WebcamList = ({ webcamList, updateSelectedWebcam }) => (
+const WebcamList = ({
+  title,
+  webcamList,
+  favoriteIDsList,
+  updateSelectedWebcam,
+  toggleFavorite,
+}) => (
   <div className='webcamListContainer'>
+    <h3>{title}</h3>
     {webcamList?.map((w) => (
       <WebcamListItem
-        w={w}
         key={w.id}
+        w={w}
         updateSelectedWebcam={updateSelectedWebcam}
+        favorited={favoriteIDsList.includes(w.id)}
+        toggleFavorite={toggleFavorite}
       />
     ))}
   </div>

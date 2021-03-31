@@ -12,10 +12,13 @@ class App extends React.Component {
       webcamList: [],
       selectedWebcam: {},
       total: 0,
+      favoritesList: [],
+      favoriteIDsList: [],
     };
 
     this.getWebcams = this.getWebcams.bind(this);
     this.updateSelectedWebcam = this.updateSelectedWebcam.bind(this);
+    this.toggleFavorite = this.toggleFavorite.bind(this);
   }
 
   componentDidMount() {
@@ -50,6 +53,27 @@ class App extends React.Component {
     this.setState({ selectedWebcam: obj });
   }
 
+  toggleFavorite(obj) {
+    if (this.state.favoriteIDsList.includes(obj.id)) {
+      let filteredFavIDsList = this.state.favoriteIDsList.filter(
+        (id) => id !== obj.id
+      );
+      let filteredFavList = this.state.favoritesList.filter(
+        (fav) => fav.id !== obj.id
+      );
+      this.setState({
+        favoritesList: filteredFavList,
+        favoriteIDsList: filteredFavIDsList,
+      });
+    } else {
+      let temp1 = [...this.state.favoriteIDsList];
+      temp1.push(obj.id);
+      let temp2 = [...this.state.favoritesList];
+      temp2.push(obj);
+      this.setState({ favoritesList: temp2, favoriteIDsList: temp1 });
+    }
+  }
+
   render() {
     return (
       <div className='appContainer'>
@@ -58,6 +82,9 @@ class App extends React.Component {
           webcamList={this.state.webcamList}
           updateSelectedWebcam={this.updateSelectedWebcam}
           total={this.state.total}
+          favoritesList={this.state.favoritesList}
+          favoriteIDsList={this.state.favoriteIDsList}
+          toggleFavorite={this.toggleFavorite}
         />
         <WebcamDisplay selectedWebcam={this.state.selectedWebcam} />
       </div>
