@@ -17,14 +17,20 @@ class App extends React.Component {
     this.updateSelectedWebcam = this.updateSelectedWebcam.bind(this);
   }
 
-  getWebcams() {
-    axios.get('/webcams').then((response) => {
+  getWebcams(data) {
+    let options = {};
+    if (data.cat !== 'all') {
+      options.cat = data.cat;
+    }
+    if (data.con !== 'all') {
+      options.con = data.con;
+    }
+    axios.get('/webcams', { params: options }).then((response) => {
       this.setState({ webcamList: response.data.result.webcams });
     });
   }
 
   updateSelectedWebcam(obj) {
-    console.log(obj);
     this.setState({ selectedWebcam: obj });
   }
 

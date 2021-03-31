@@ -1,9 +1,10 @@
 import React from 'react';
 import WebcamList from './WebcamList.jsx';
+import SearchOptions from './SearchOptions.jsx';
 
 const SearchPanel = ({ getWebcams, webcamList, updateSelectedWebcam }) => (
   <div className='searchPanelContainer'>
-    <button onClick={getWebcams}>Search</button>
+    <SearchOptions getWebcams={getWebcams} />
     <WebcamList
       webcamList={webcamList}
       updateSelectedWebcam={updateSelectedWebcam}
