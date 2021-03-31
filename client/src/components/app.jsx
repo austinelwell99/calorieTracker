@@ -22,6 +22,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    let storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    let storedFavoriteIDs =
+      JSON.parse(localStorage.getItem('favoriteIDs')) || [];
+    this.setState({ favoritesList: storedFavorites });
+    this.setState({ favoriteIDsList: storedFavoriteIDs });
+
     this.getWebcams({ offset: 0 }, () =>
       this.updateSelectedWebcam(this.state.webcamList[1])
     );
@@ -61,17 +67,31 @@ class App extends React.Component {
       let filteredFavList = this.state.favoritesList.filter(
         (fav) => fav.id !== obj.id
       );
-      this.setState({
-        favoritesList: filteredFavList,
-        favoriteIDsList: filteredFavIDsList,
-      });
+      this.setState(
+        {
+          favoritesList: filteredFavList,
+          favoriteIDsList: filteredFavIDsList,
+        },
+        this.saveToLocalStorage
+      );
     } else {
       let temp1 = [...this.state.favoriteIDsList];
       temp1.push(obj.id);
       let temp2 = [...this.state.favoritesList];
       temp2.push(obj);
-      this.setState({ favoritesList: temp2, favoriteIDsList: temp1 });
+      this.setState(
+        { favoritesList: temp2, favoriteIDsList: temp1 },
+        this.saveToLocalStorage
+      );
     }
+  }
+
+  saveToLocalStorage() {
+    localStorage.setItem('favorites', JSON.stringify(this.state.favoritesList));
+    localStorage.setItem(
+      'favoriteIDs',
+      JSON.stringify(this.state.favoriteIDsList)
+    );
   }
 
   render() {
