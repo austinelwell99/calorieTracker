@@ -14,7 +14,7 @@ const WebcamDisplay = ({ selectedWebcam }) => (
       title={selectedWebcam?.title}
       allowFullScreen={true}
     /> */}
-    <h1>{selectedWebcam.title}</h1>
+    <h1>{selectedWebcam?.title}</h1>
   </div>
 );
 

@@ -13,6 +13,22 @@ body {
   height: 100%;
   padding: 10px;
   background-color: darkcyan;
+  font-size: 100%;
+}
+
+.searchOptionsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.optionsTopBar {
+  display: flex;
+}
+
+.optionsBottomBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 0px 0;
 }
 
 .webcamDisplayContainer {
