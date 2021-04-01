@@ -4,7 +4,7 @@
 
 ## Summary
 
-> If you're the kind of person who likes to see what's happening around the world this site is for you! Scan through hundreds of live webcams with ease, or specify the specific environment you're curious about. Complete with the ability to favorite webcams, this simple app is great for browsing on your free time.
+> If you're the kind of person who likes to see what's happening around the world, then this site is for you! Scan through hundreds of live webcams with ease, or specify the specific environment you're curious about. Complete with the ability to favorite webcams, this simple app is great for browsing on your free time.
 
 ## How to Get Started
 
