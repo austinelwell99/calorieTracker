@@ -1,37 +1,14 @@
 # Global Webcam Display
 
-## Heading
-
-> Name the product in a way the reader (i.e. your target customers) will understand.
-
-## Sub-Heading
-
-> Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+## An all-in-one site for exploring hundreds of the live webcams around the world.
 
 ## Summary
 
-> Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
-## Problem
-
-> Describe the problem your product solves.
-
-## Solution
-
-> Describe how your product elegantly solves the problem.
-
-## Quote from You
-
-> A quote from a spokesperson in your company.
+> If you're the kind of person who likes to see what's happening around the world this site is for you! Scan through hundreds of live webcams with ease, or specify the specific environment you're curious about. Complete with the ability to favorite webcams, this simple app is great for browsing on your free time.
 
 ## How to Get Started
 
-> Describe how easy it is to get started.
+> Once you've forked and cloned this repo, open up two terminals and run the following commands:
 
-## Customer Quote
-
-> Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
-## Closing and Call to Action
-
-> Wrap it up and give pointers where the reader should go next.
+- `npm run build`
+- `npm start`
